@@ -1,5 +1,6 @@
 import { importClick } from "../../src/commands/click-import"
-import { PageType, ResponseStatus, Click, Message } from "../../src/types/clicks";
+import { PageType, Click, Message } from "../../src/types/clicks";
+import { ResponseStatus } from "../../src/types/shared"
 import { LOGINID, PASSWORD, CAMPAIGNTEST } from "../../src/util/secrets"
 
 describe("Konnektive CRM - Import Clicks", () => {

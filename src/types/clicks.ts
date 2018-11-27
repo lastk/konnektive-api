@@ -1,3 +1,5 @@
+import { ResponseStatus } from "./shared"
+
 export interface Click {
     loginId: string;
     password: string;
@@ -32,10 +34,7 @@ export interface Message {
     pixel?: boolean;
     affVals: AffVals;
 }
-export enum ResponseStatus {
-    ERROR = "ERROR",
-    SUCCESS = "SUCCESS"
-}
+
 export interface ClickResponse {
     result: ResponseStatus;
     message?: Message | string;
