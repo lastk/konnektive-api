@@ -3,8 +3,6 @@ import * as fs from 'fs';
 
 let env = process.env.NODE_ENV;
 
-console.log(`Using .env.${env} file to supply config environment variables`);
-
 if (fs.existsSync(".env")) {
     console.log("Using .env file to supply config environment variables")
     dotenv.config({ path: ".env" });
