@@ -4,10 +4,8 @@ import * as fs from 'fs';
 let env = process.env.NODE_ENV;
 
 if (fs.existsSync(".env")) {
-    console.log("Using .env file to supply config environment variables")
     dotenv.config({ path: ".env" });
 } else {
-    console.log(`Using .env.${env} file to supply config environment variables`);
     dotenv.config({ path: `.env.${env}` });  // you can delete this after you create your own .env file!
 }
 
