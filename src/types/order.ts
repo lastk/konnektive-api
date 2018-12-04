@@ -107,7 +107,7 @@ export interface Item {
     nextBillDate: string;
 }
 
-export interface Message {
+export interface OrderMessage {
     orderId: string;
     sourceId?: any;
     sourceValue1?: any;
@@ -167,7 +167,7 @@ export interface Message {
 
 export interface OrderResponse {
     result: ResponseStatus;
-    message: Message | string;
+    message: OrderMessage | string;
 }
 
 

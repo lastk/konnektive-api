@@ -1,5 +1,5 @@
 import { importClick } from "../../src/commands/click-import"
-import { PageType, Click, Message } from "../../src/types/clicks";
+import { PageType, Click, ClickMessage } from "../../src/types/clicks";
 import { ResponseStatus } from "../../src/types/shared"
 import { LOGINID, PASSWORD, CAMPAIGNTEST } from "../../src/util/secrets"
 
@@ -17,7 +17,7 @@ describe("Konnektive CRM - Import Clicks", () => {
         it("import click successfully with affiliate ids", () => {
             return importClick(validPayload).then(response => {
                 expect(response.result).toEqual(ResponseStatus.SUCCESS)
-                expect((<Message>response.message).affVals.affId).toEqual("000123")
+                expect((<ClickMessage>response.message).affVals.affId).toEqual("000123")
             })
         })
     })

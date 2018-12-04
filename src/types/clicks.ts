@@ -29,7 +29,7 @@ export interface AffVals {
     c3?: string;
 }
 
-export interface Message {
+export interface ClickMessage {
     sessionId?: string;
     pixel?: boolean;
     affVals: AffVals;
@@ -37,5 +37,5 @@ export interface Message {
 
 export interface ClickResponse {
     result: ResponseStatus;
-    message?: Message | string;
+    message?: ClickMessage | string;
 }

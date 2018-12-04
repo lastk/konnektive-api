@@ -39,7 +39,7 @@ export interface Lead {
     disableCustomerDedup?: KnkBoolean;
 }
 
-export interface Message {
+export interface LeadMessage {
     billShipSame: KnkBoolean;
     customTaxSet: KnkBoolean;
     shipmentInsured: KnkBoolean;
@@ -75,7 +75,7 @@ export interface Message {
 
 export interface LeadResponse {
     result: ResponseStatus;
-    message: Message;
+    message: LeadMessage | string;
 }
 
 

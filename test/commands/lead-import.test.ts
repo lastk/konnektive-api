@@ -1,4 +1,4 @@
-import { Lead, Message } from "../../src/types/lead"
+import { Lead, LeadMessage } from "../../src/types/lead"
 import { importLead } from "../../src/commands/lead-import"
 import { LOGINID, PASSWORD, CAMPAIGNTEST } from "../../src/util/secrets"
 import { ResponseStatus } from "../../src/types/shared";
@@ -26,7 +26,7 @@ describe("Konnektive CRm - Import Leads", () => {
 
             return importLead(lead).then(response => {
                 expect(response.result).toEqual(ResponseStatus.SUCCESS)
-                expect((<Message>response.message).orderId).toBeDefined()
+                expect((<LeadMessage>response.message).orderId).toBeDefined()
             })
         })
     })

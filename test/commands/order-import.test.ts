@@ -1,4 +1,4 @@
-import { Order, PaySource, Message} from "../../src/types/order"
+import { Order, PaySource, OrderMessage} from "../../src/types/order"
 import { importOrder } from "../../src/commands/order-import"
 
 import { LOGINID, PASSWORD, CAMPAIGNTEST } from "../../src/util/secrets"
@@ -30,7 +30,7 @@ describe("Konnektive CRM - Import Orders", () => {
         }
 
         return importOrder(validPayload).then(response => {
-            expect( (<Message>response.message).orderId).toBeDefined();
+            expect( (<OrderMessage>response.message).orderId).toBeDefined();
             expect(response.result).toEqual(ResponseStatus.SUCCESS)
         })
     })
