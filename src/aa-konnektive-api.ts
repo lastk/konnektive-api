@@ -4,5 +4,5 @@ export * from './types/lead'
 export * from './types/order'
 
 export * from './commands/click-import'
-export * from './commands/click-import'
+export * from './commands/lead-import'
 export * from './commands/order-import'
